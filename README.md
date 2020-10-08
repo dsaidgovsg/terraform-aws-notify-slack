@@ -78,6 +78,7 @@ To run the tests:
 | create | Whether to create all resources | `bool` | `true` | no |
 | create\_sns\_topic | Whether to create new SNS topic | `bool` | `true` | no |
 | iam\_role\_tags | Additional tags for the IAM role | `map(string)` | `{}` | no |
+| iam\_permissions\_boundary | If set, restricts the created IAM role to the given permissions boundary | `string` | null | no |
 | kms\_key\_arn | ARN of the KMS key used for decrypting slack webhook url | `string` | `""` | no |
 | lambda\_description | The description of the Lambda function | `string` | n/a | yes |
 | lambda\_function\_name | The name of the Lambda function to create | `string` | `"notify_slack"` | no |

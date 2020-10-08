@@ -52,6 +52,8 @@ resource "aws_iam_role" "lambda" {
   name_prefix        = "lambda"
   assume_role_policy = data.aws_iam_policy_document.assume_role[0].json
 
+  permissions_boundary = var.iam_permissions_boundary
+
   tags = merge(var.tags, var.iam_role_tags)
 }
 

@@ -89,6 +89,12 @@ variable "iam_role_tags" {
   default     = {}
 }
 
+variable "iam_permissions_boundary" {
+  description = "If set, restricts the created IAM role to the given permissions boundary"
+  type        = string
+  default     = null
+}
+
 variable "lambda_function_tags" {
   description = "Additional tags for the Lambda function"
   type        = map(string)
